@@ -1,0 +1,264 @@
+/* Основное окно */
+QMainWindow#MainWindow {
+    background-color: #0d0d0d;
+    font-weight: 500;
+}
+
+QWidget {
+    color: #b0b0b0;
+    font-weight: 500;
+    border: none;
+}
+
+
+QGridLayout#grid_sensors {
+    spacing: 10px;
+}
+
+/* Основной виджет блока сенсора */
+QWidget#sensor_block {
+    background-color: transparent;
+}
+
+
+/* Лейбл сенсора */
+QLabel#sensor_lable {
+    color: #00d8ff;
+}
+
+/* Чекбокс CSV */
+QCheckBox::indicator {
+    background-color: #8e8d8d;
+}
+
+
+QCheckBox::indicator:checked {
+    background-color: #0189d1;
+}
+
+/* Кнопка редактирования */
+QPushButton#edit_btn {
+    background-color: #5600b1;
+    border-radius: 5px;
+    border: none;
+    padding: 6px;
+    font-weight: 500;
+    color: white;
+}
+
+QPushButton#edit_btn:hover {
+    background-color: #0189d1;
+    color: white;
+}
+
+
+
+/* Основной виджет нижнего меню */
+QWidget#bottom_menu {
+    background-color: transparent;
+}
+
+/* Контейнер нижнего меню */
+QWidget#bottom_menu_container {
+    background-color: #272727;
+    border-radius: 8px;
+}
+
+/* COM контейнер */
+QWidget#com_container {
+    background-color: transparent;
+}
+
+QLabel#com_lable {
+    background-color: #111111;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 5px;
+    color: white;
+}
+
+QComboBox {
+    background-color: #272727;
+    color: #FFFFFF;
+    border: 2px solid #11718a;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #272727;
+    color: #FFFFFF;
+    selection-color: #FFFFFF;
+}
+
+QComboBox::item:selected {
+    color: #00d8ff;
+}
+
+/* BAUD контейнер */
+QWidget#baud_container, QWidget#bottom_menu_btn_container, #label_connect {
+    background-color: transparent;
+}
+
+QLabel#baud_lable {
+    background-color: #111111;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+QLineEdit#baud_input {
+    border: 2px solid #11718a;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color: #272727;
+}
+
+/* Кнопки */
+
+QPushButton#connected_btn {
+    border-radius: 5px;
+    padding: 6px;
+    background-color: #00d8ff;
+    color: #111111;
+    border: none;
+}
+
+QPushButton#connected_btn:hover {
+    background-color: #0189d1;
+    color: white;
+}
+
+QPushButton#disconnected_btn {
+    border: 2px solid #11718a;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+QPushButton#disconnected_btn:hover {
+    background-color: #222222;
+}
+
+
+/* Главное окно SensorDetail */
+QMainWindow#SensorDetail {
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* Основной контейнер */
+QWidget#main_container {
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* Operating mode label */
+QLabel#operating_mode_label {
+    color: #00d8ff;
+}
+
+/* Контейнер выбора режима */
+QWidget#operating_mod_container {
+    background-color: #1c1d1f;
+    border-radius: 8px;
+}
+
+/* Кнопки управления стримом */
+#left_container QPushButton {
+    border-radius: 5px;
+    padding: 6px;
+    background-color: #00d8ff;
+    color: #111111;
+    border: none;
+}
+
+#left_container QPushButton:hover {
+    background-color: #0189d1;
+    color: white;
+}
+
+/* Стоп кнопки */
+QPushButton#stop_btn,
+QPushButton#stop_recording_btn,
+QPushButton#chipreset_btn,
+QPushButton#load_config_btn,
+QPushButton#load_defaults_btn {
+    border: 2px solid #11718a;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #0d0d0d;
+    color: #b0b0b0;
+}
+
+QPushButton#stop_btn:hover,
+QPushButton#stop_recording_btn:hover,
+QPushButton#chipreset_btn:hover,
+QPushButton#load_config_btn:hover {
+    background-color: #222222;
+}
+
+/* CSV контейнер */
+QWidget#csv_container,
+QWidget#csv_data_container {
+    background-color: #1c1d1f;
+    border-radius: 8px;
+}
+
+#csv_container QPushButton:disabled, #registers_container QPushButton:disabled,
+#operating_mod_container QPushButton:disabled,
+#registers_container QSpinBox:disabled, #registers_container QComboBox:disabled {
+    background-color: #5d5d5d;
+    color: #8f8f8f;
+    border: none;
+}
+
+#registers_container QCheckBox::indicator:disabled {
+    background-color: #5d5d5d;
+}
+
+/* Labels */
+QLabel#csv_label,
+QLabel#registers_label,
+QLabel#csv_data_label {
+    color: #00d8ff;
+}
+
+QLabel#label_file {
+    border-radius: 5px;
+    padding: 1px 5px;
+    background-color: #111111;
+}
+
+/* Регистры */
+QWidget#registers_container {
+    background-color: #1c1d1f;
+    border-radius: 8px;
+}
+
+QWidget#reg_input_container,
+QWidget#change_channel_container {
+    padding: 5px;
+}
+
+QWidget#line_edit_meaning,
+QLineEdit#line_edit_address,
+QSpinBox,
+QLineEdit#file_path_input {
+    background-color: #313131;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#csv_data_block {
+    background-color: #1c1d1f;
+}
+
+
+#modal_window {
+    background-color: #1c1d1f;
+}
