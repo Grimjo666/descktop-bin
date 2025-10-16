@@ -1,2 +1,11 @@
-# Pyarmor 9.1.9 (trial), 000000, 2025-10-15T14:34:33.786702
-from .pyarmor_runtime import __pyarmor__
+import sys
+import importlib
+
+if sys.platform.startswith("win"):
+    libpath = "pyarmor_runtime_000000.win.pyarmor_runtime"
+elif sys.platform.startswith("linux"):
+    libpath = "pyarmor_runtime_000000.linux.pyarmor_runtime"
+else:
+    raise RuntimeError(f"Unsupported platform: {sys.platform}")
+
+__pyarmor__ = importlib.import_module(libpath).__pyarmor__
